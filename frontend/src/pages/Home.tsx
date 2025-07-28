@@ -4,6 +4,7 @@ import CategoryNav from '../components/Home/CategoryNav'
 import Banner from '../components/Home/Banner'
 import AdCenter from '../components/Home/AdCenter'
 import LatestProducts from '../components/Home/LatestProducts'
+import DownloadPromotion from '../components/Home/DownloadPromotion'
 
 const Home = () => {
     return (
@@ -11,8 +12,10 @@ const Home = () => {
             <Navbar />
             <CategoryNav />
             <Banner />
-            <AdCenter />
+            <AdCenter w={'w-full'} h={'h-70'} />
             <LatestProducts />
+            <AdCenter w={'w-full'} h={'h-25'} m={'p-5'} />
+            <DownloadPromotion />
         </div>
     )
 }

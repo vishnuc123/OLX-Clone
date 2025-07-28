@@ -4,7 +4,7 @@ import heart from '/navbar/heart.png'
 
 const Navbar = () => {
   return (
-    <div className='w-full mx-auto'>
+    <div className='w-full mx-auto sticky'>
       <div className='w-max-7xl bg-slate-100 mx-auto flex'>
         {/* logo */}
         <img src={logo} alt="" className='w-25 h-18 object-fit' />
