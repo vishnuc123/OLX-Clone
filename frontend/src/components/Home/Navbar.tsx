@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '/navbar/logo-final.png'
-import heart from '/navbar/heart.png'
+
 
 const Navbar = () => {
+  const [inputPlaceHolder,setInputPlaceHolder] = useState("")
+  const Values = ["Jobs","Cars","Properties","Mobiles","Bikes"]
+  const [index,setindex] = useState(0)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setInputPlaceHolder(Values[index])
+      setindex((prev) => (prev+1) % Values.length)
+    },2000);
+
+    return () => clearInterval(interval)
+  },)
+
+
   return (
     <div className='w-full mx-auto sticky'>
       <div className='w-max-7xl bg-slate-100 mx-auto flex'>
@@ -20,7 +33,7 @@ const Navbar = () => {
         {/* search */}
         <div className='flex items-center relative'>
 
-          <input type="text" className='w-[800px] h-10 ml-5 border-2 rounded-md border-black bg-white font-serif' placeholder='  Search "cars"' />
+          <input type="text" className='w-[800px] h-10 ml-5 border-2 rounded-md border-black bg-white font-serif' placeholder={`  Search  "${inputPlaceHolder}"` } />
           <div className="absolute right-0 w-10 h-10 bg-black rounded-md flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

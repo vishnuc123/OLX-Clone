@@ -5,6 +5,8 @@ import Banner from '../components/Home/Banner'
 import AdCenter from '../components/Home/AdCenter'
 import LatestProducts from '../components/Home/LatestProducts'
 import DownloadPromotion from '../components/Home/DownloadPromotion'
+import PromotedContent from '../components/Home/PromotedContent'
+import Footer from '../components/Home/Footer'
 
 const Home = () => {
     return (
@@ -16,6 +18,8 @@ const Home = () => {
             <LatestProducts />
             <AdCenter w={'w-full'} h={'h-25'} m={'p-5'} />
             <DownloadPromotion />
+            <PromotedContent />
+            <Footer />
         </div>
     )
 }
