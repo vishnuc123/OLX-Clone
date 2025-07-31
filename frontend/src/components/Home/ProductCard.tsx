@@ -11,7 +11,7 @@ type Product = {
 
 const ProductCard = ({item}:{item:Product}) => {
     return (
-        <div className='w-full'>
+        <div className='w-full cursor-pointer'>
             <div className="w-full border rounded overflow-hidden hover:shadow-md transition p-2">
                 <img src={item.image} alt="product" className="w-full h-40 object-cover" />
                 <p className="text-lg font-bold text-green-600">₹{item.price}</p>

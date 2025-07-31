@@ -73,7 +73,7 @@ const ProductGrid = () => {
     return (
         <div className="w-full grid grid-cols-4 gap-4">
             {dummy.map((item,index) => (
-                <div><ProductCard item={item}/></div>
+                <div key={item.id}><ProductCard item={item}/></div>
             ))}
             {/* <div><ProductCard /></div> */}
         </div>
